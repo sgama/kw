@@ -1,4 +1,4 @@
-baseURL = "http://kawindi.com/"
+baseURL = "https://kawindi.com/"
 languageCode = "en-us"
 title = "Kawindi M."
 theme = "hugo-freelancer-theme"

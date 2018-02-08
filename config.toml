@@ -38,7 +38,7 @@ theme = "hugo-freelancer-theme"
         # Copy your own image into './static/img/'' if you wish
         image = "profile.png"
         name = "Kawindi M"
-        subtitle = "Blogger - Programmer - Gopher"
+        subtitle = "Electrical Engineer - Programmer - Huge Nerd"
 
 
     [params.portfolio]
@@ -58,11 +58,11 @@ theme = "hugo-freelancer-theme"
     [params.about]
         title = "About"
         # The about text is splitted into a left and right column
-        left = "Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization."
+        left = "Just a small town girl Livin' in a lonely world She took the midnight train Goin' anywhere Just a city boy Born and raised in South Detroit He took the midnight train Goin' anywhere "
         right = "Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!"
 
         [params.about.button]
-            text = "Download theme"
+            text = "Download Resume"
             link = "//github.com/digitalcraftsman/hugo-freelancer-theme/archive/master.zip"
             icon = "download"
 
@@ -97,7 +97,7 @@ theme = "hugo-freelancer-theme"
         [params.footer.location]
             title = "Location"
             # Postal address (add as many lines as necessary)
-            address = ["3481 Melrose Place", "Beverly Hills, CA 90210"]
+            address = ["Vancouver, Canada"]
 
         [params.footer.social]
             title = "Around the web"
@@ -114,5 +114,5 @@ theme = "hugo-freelancer-theme"
 
 
         [params.footer.credits]
-            title = "About Freelancer"
-text = "Freelance is a free to use, open source Bootstrap theme created by [Start Bootstrap](//startbootstrap.com)."
+            title = "About Kawindi"
+            text = "TEST"

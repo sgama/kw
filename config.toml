@@ -38,7 +38,7 @@ theme = "hugo-freelancer-theme"
         # Copy your own image into './static/img/'' if you wish
         image = "profile.png"
         name = "Kawindi M"
-        subtitle = "Electrical Engineer - Programmer - Huge Nerd"
+        subtitle = "Electrical Engineer - Programmer - Pro-Boardgame Player"
 
 
     [params.portfolio]

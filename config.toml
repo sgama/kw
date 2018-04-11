@@ -1,6 +1,6 @@
 baseURL = "https://kawindi.com/"
 languageCode = "en-us"
-title = "Kawindi M."
+title = "Kawindi Muthukuda"
 theme = "hugo-freelancer-theme"
 
 [params]
@@ -10,7 +10,7 @@ theme = "hugo-freelancer-theme"
 
     # To provide some metadata for search engines feel free to add a few
     # information about you and your website.
-    name = "Kawindi M."
+    name = "Kawindi Muthukuda"
     description = "My awesome description"
 
     # Since this template is static, the contact form uses www.formspree.io as a
@@ -31,14 +31,14 @@ theme = "hugo-freelancer-theme"
 	custom_js  = []
 
     [params.navigation]
-        brand = "Kawindi M's Portfolio"
+        brand = "Kawindi Muthukuda's Portfolio"
 
 
     [params.header]
         # Copy your own image into './static/img/'' if you wish
         image = "profile.png"
-        name = "Kawindi M"
-        subtitle = "Electrical Engineer - Programmer - Pro-Boardgame Player"
+        name = "Kawindi Muthukuda"
+        subtitle = "Electrical Engineer"
 
 
     [params.portfolio]

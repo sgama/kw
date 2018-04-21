@@ -24,7 +24,7 @@ theme = "hugo-freelancer-theme"
     # - send a dummy email youself to confirm your account
     # - click the confirm link in the email from www.formspree.io
     # - you're done. Happy mailing!
-    email = "your@email.com"
+    email = "kwmuth@gmail.com"
 
     # Custom assets
 	custom_css = []
@@ -38,7 +38,7 @@ theme = "hugo-freelancer-theme"
         # Copy your own image into './static/img/'' if you wish
         image = "profile.png"
         name = "Kawindi Muthukuda"
-        subtitle = "Electrical Engineer"
+        subtitle = "Electrical Engineer | Software Developer"
 
 
     [params.portfolio]
@@ -56,10 +56,10 @@ theme = "hugo-freelancer-theme"
 
 
     [params.about]
-        title = "About"
+        title = "About Me"
         # The about text is splitted into a left and right column
-        left = "Just a small town girl Livin' in a lonely world She took the midnight train Goin' anywhere Just a city boy Born and raised in South Detroit He took the midnight train Goin' anywhere "
-        right = "Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!"
+        left = "Hello! I'm Kawindi and this is my website. Here you can find a collection of all the projects that I've worked on, or are currently in the works - both work related and personal. <br> <br> I graduated with my bachelor's degree in electrical engineering from the University of British Columbia (UBC) in May 2017. Since then, I've been working for MDA, a space technology company, as a software developer. My current work contributes to the development and deployment of ground systems for Earth observation satellites."
+	right = "Because I focused my degree on electrical engineering while gaining industry experience in software development, I have a good balance of both hardware and software knowledge. It has also engrained in me the mathematical rigour that is sometimes necessary to discover elegant solutions. <br> <br> I love tackling challenging problems and try to approach problem solving from an organized and methodical perspective. I feel that it has allowed me to achieve a deeper level of understanding of the task and, ultimately, the end goal. <br> <br> Thanks for stopping by. If you would like, feel free to connect with me on LinkedIn or send me an email."
 
         [params.about.button]
             text = "Download Resume"
@@ -92,7 +92,7 @@ theme = "hugo-freelancer-theme"
 
 
     [params.footer]
-        copyright = "Kawindi M"
+        copyright = "Kawindi Muthukuda"
 
         [params.footer.location]
             title = "Location"
@@ -100,19 +100,19 @@ theme = "hugo-freelancer-theme"
             address = ["Vancouver, Canada"]
 
         [params.footer.social]
-            title = "Around the web"
+            title = "Connect"
             # All icons using Fontawesome's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
             # for more icons. The icons are represented by their corresponding
             # CSS class.
             [[params.footer.social.networks]]
-                icon = "fa-github"
-                link = "//github.com/spf13/hugo"
+                icon = "fa-linkedin"
+                link = "https://www.linkedin.com/in/kawindimuthukuda/"
 
-            [[params.footer.social.networks]]
-                icon = "fa-stack-overflow"
-                link=  "//stackoverflow.com/questions/tagged/hugo"
+            #[[params.footer.social.networks]]
+                #icon = "fa-github"
+                #link=  "//stackoverflow.com/questions/tagged/hugo"
 
 
-        [params.footer.credits]
-            title = "About Kawindi"
-            text = "TEST"
+        #[params.footer.credits]
+            #title = "About Kawindi"
+            #text = "TEST"

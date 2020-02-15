@@ -33,16 +33,14 @@ jobs:
         run: echo "kawindi.com" >> public/CNAME
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v2
-        env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./public
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./public
 
       - name: Purge Cloudflare CDN Cache
-        run: |
-          curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE }}/purge_cache" \
-          -H "X-Auth-Email: ${{ secrets.CLOUDFLARE_AUTH_EMAIL }}" \
-          -H "X-Auth-Key: ${{ secrets.CLOUDFLARE_AUTH_KEY }}" \
-          -H "Content-Type: application/json" \
-          --data '{"purge_everything":true}'
+        uses: jakejarvis/cloudflare-purge-action@master
+        env:
+          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
+          CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_AUTH_EMAIL }}
+          CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}

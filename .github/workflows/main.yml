@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
         with:
-          ref: master
+          ref: develop
           submodules: recursive
 
       - name: Configure GIT_COMMIT_SHA env
@@ -42,10 +42,10 @@ jobs:
           wget https://raw.githubusercontent.com/peaceiris/actions-gh-pages/v2/entrypoint.sh
           bash ./entrypoint.sh
 
-      # - name: Purge Cloudflare CDN Cache
-      #   run: |
-      #     curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE }}/purge_cache" \
-      #     -H "X-Auth-Email: ${{ secrets.CLOUDFLARE_AUTH_EMAIL }}" \
-      #     -H "X-Auth-Key: ${{ secrets.CLOUDFLARE_AUTH_KEY }}" \
-      #     -H "Content-Type: application/json" \
-      #     --data '{"purge_everything":true}'
+      - name: Purge Cloudflare CDN Cache
+        run: |
+          curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE }}/purge_cache" \
+          -H "X-Auth-Email: ${{ secrets.CLOUDFLARE_AUTH_EMAIL }}" \
+          -H "X-Auth-Key: ${{ secrets.CLOUDFLARE_AUTH_KEY }}" \
+          -H "Content-Type: application/json" \
+          --data '{"purge_everything":true}'

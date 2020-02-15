@@ -21,9 +21,15 @@ jobs:
             hugo-version: "0.64.0"
             extended: true
 
+        - name: Configure GIT_COMMIT_SHA env
+          run: export GIT_COMMIT_SHA=`git rev-parse --verify HEAD`
+  
+        - name: Configure GIT_COMMIT_SHA_SHORT env
+          run: export GIT_COMMIT_SHA_SHORT=`git rev-parse --short HEAD`
+
         - name: Build
           run: |
-            GIT_COMMIT_SHA=`git rev-parse --verify HEAD` GIT_COMMIT_SHA_SHORT=`git rev-parse --short HEAD` hugo --gc --minify --cleanDestinationDir
+            hugo --gc --minify --cleanDestinationDir
             echo "kawindi.com" >> public/CNAME
 
         - name: Deploy to GitHub Pages

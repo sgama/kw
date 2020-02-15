@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
         with:
@@ -35,12 +35,13 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./public
 
       - name: Purge Cloudflare CDN Cache
-        uses: jakejarvis/cloudflare-purge-action@master
-        env:
-          CLOUDFLARE_ZONE: ${{ secrets.CLOUDFLARE_ZONE }}
-          CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_AUTH_EMAIL }}
-          CLOUDFLARE_KEY: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
+        run: |
+          curl -X DELETE "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE }}/purge_cache" \
+          -H "X-Auth-Email: ${{ secrets.CLOUDFLARE_AUTH_EMAIL }}" \
+          -H "X-Auth-Key: ${{ secrets.CLOUDFLARE_AUTH_KEY }}" \
+          -H "Content-Type: application/json" \
+          --data '{"purge_everything":true}'
